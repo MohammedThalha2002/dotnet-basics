@@ -1,0 +1,59 @@
+@* @model FirstWebAppMVC.Models.Person; *@
+@model IEnumerable<FirstWebAppMVC.Models.Person>;
+
+@{
+    @* var person1 = ViewData["Person"] as Person; *@
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th {
+        background: #ccc;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background: #efefef;
+    }
+
+    tr:hover {
+        background: #d1d1d1;
+    }
+</style>
+
+<h2>This is Data Page</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+<h2>Person Details</h2>
+
+@* <h3>Name : @person1.Name</h3>
+<h3>AGE : @person1.Age</h3>
+<h3>Dept : @person1.Department</h3> *@
+
+<br>
+<br>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>AGE</th>
+        <th>Dept</th>
+    </tr>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+            <td>@person.Department</td>
+        </tr>
+    }
+</table>

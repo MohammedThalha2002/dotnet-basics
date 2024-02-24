@@ -1,0 +1,27 @@
+@model FirstWebAppMVC.Models.Person;
+
+<br>
+<br>
+
+
+<form asp-controller="Home" asp-action="Data" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" asp-for="Name">
+    </div>
+    <br>
+    <div>
+        <label for="age">Age</label>
+        <input id="age" type="text" asp-for="Age">
+    </div>
+    <br>
+    <div>
+        <label for="dept">Department</label>
+        <input id="dept" type="text" asp-for="Department">
+    </div>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+<br>
+<br>

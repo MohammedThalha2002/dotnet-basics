@@ -1,0 +1,30 @@
+<h1>@ViewData["title"]</h1>
+
+<br>
+<br>
+
+<h1>@ViewBag.BadName</h1>
+
+<br>
+<br>
+
+<h2>Person Details</h2>
+<h3>@ViewBag.Person.Name</h3>
+<h3>@ViewBag.Person.Age</h3>
+<h3>@ViewBag.Person.Department</h3>
+
+<br>
+<br>
+
+<h2>Profile Details</h2>
+<h3>@ViewBag.Profile.name</h3>
+<h3>@ViewBag.Profile.age</h3>
+<h3>@ViewBag.Profile.dept</h3>
+
+<br>
+<br>
+
+@foreach (var person in ViewBag.PersonList)
+{
+    <h2>@person.Name</h2>
+}

@@ -1,0 +1,24 @@
+@model FirstWebAppMVC.Models.Profile;
+
+@{
+    var profile = @ViewData["profileData"] as Profile;
+}
+
+<h2>Profile Data</h2>
+
+<h1>Name : @ViewData["name"]</h1>
+<h1>Dept : @ViewData["dept"]</h1>
+
+<br>
+<br>
+<h1>@profile.name</h1>
+<h1>@profile.dept</h1>
+<h1>@profile.age</h1>
+
+<br>
+<br>
+<h2>NEWW - model</h2>
+<br>
+<h1>@Model.name</h1>
+<h1>@Model.dept</h1>
+<h1>@Model.age</h1>
